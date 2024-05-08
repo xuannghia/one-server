@@ -1,3 +1,4 @@
+#!/bin/bash
 
 IMAGE=xuannghia/whoami-curl
 SERVICE_NAME=webapp
