@@ -2,7 +2,7 @@
 
 IMAGE=xuannghia/whoami-curl
 SERVICE_NAME=webapp
-ENV_FILE=docker-compose.env
+ENV_FILE=./.env.example
 DOMAIN=webapp.localhost
 
 COUNT_FILE=".${SERVICE_NAME}_count"
@@ -24,6 +24,7 @@ echo "Starting new container..."
 docker run \
  --detach \
  --name $NAME \
+ --env-file $ENV_FILE \
  --restart unless-stopped \
  --network traefik-proxy \
  --label "traefik.enable=true" \
