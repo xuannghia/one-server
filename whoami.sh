@@ -1,0 +1,1 @@
+docker build -t xuannghia/whoami-curl .
